@@ -1,0 +1,42 @@
+@color-orange: #ff9900;
+@color-body: white;
+
+@img-border-radius: 8px;
+@img-display: block;
+@img-margin: auto;
+@img-padding: 5px;
+@img-width: 300px;
+
+@background-body: content-box radial-gradient(crimson, black);
+
+@headers-font-family: Satisfy, 'Times New Roman', Arial, cursive;
+
+/*примеси без параметров*/
+.headers-measurement (){
+	font-size: 40px;
+	padding-top: 60px;
+}
+
+/*примесь с параметрами*/
+.font-weight (@value){
+	font-weight: @value;
+}
+
+body {
+	background: @background-body;
+	color: @color-body;
+}
+
+img {
+	border-radius: @img-border-radius;
+	display: @img-display;
+	margin: @img-margin;
+	padding: @img-padding;
+	width: @img-width;
+}
+
+h1 {
+	font-family: @headers-font-family;
+	.headers-measurement (); /*использование примеси без параметров*/
+	.font-weight (normal); /*использование примеси с параметром*/
+}
